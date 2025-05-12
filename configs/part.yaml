@@ -38,7 +38,7 @@ entry_start_test: 0
 
 num_workers: 6
 batchsize: 128
-val_batchsize: 1000
+val_batchsize: 128
 
 eval_dir: /pscratch/sd/a/aelabd/parnassus/cfm/fastsim/FS_evals/
 truth_path_train: /pscratch/sd/a/aelabd/parnassus/data/qcd470_ttbar_train_cms.root
