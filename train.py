@@ -26,6 +26,8 @@ resource.setrlimit(resource.RLIMIT_NOFILE, (4096, rlimit[1]))
 
 os.environ["NCCL_SOCKET_NTHREADS"] = "2"
 os.environ["NCCL_NSOCKS_PERTHREAD"] = "4"
+os.environ["COMET_API_KEY"] = "dP7SQEk285l0DsZvRZgPM4cR7"
+os.environ["COMET_WORKSPACE"] = "abdelabd"
 
 yaml.add_constructor(
     "!include", yaml_include.Constructor(base_dir=Path(__file__).parent / "configs")
@@ -250,9 +252,9 @@ def print_job_info(args, config):
     print("torch", torch.__version__)
     print("lightning", pytorch_lightning.__version__)
     print("cuda", torch.version.cuda)
-    import dgl
+    # import dgl
+    # print("dgl", dgl.__version__)
 
-    print("dgl", dgl.__version__)
     if torch.cuda.is_available():
         device_name = torch.cuda.get_device_name(torch.cuda.current_device())
         print("Visible GPUs:", args.gpus, " - ", device_name)
