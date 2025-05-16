@@ -36,7 +36,7 @@ entry_start_train: 0
 entry_start_valid: 2_800_000
 entry_start_test: 0
 
-num_workers: 6
+num_workers: 16
 batchsize: 128
 val_batchsize: 128
 

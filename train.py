@@ -227,7 +227,8 @@ def train(args, config, logger):
         gradient_clip_val=config.get("gradient_clip_val", None),
         precision=config.get("precision", "32-true"),
         profiler=profiler,
-        # strategy="dp"
+        num_nodes=4,
+        strategy="ddp"
     )
 
     # fit model model
